@@ -8,18 +8,19 @@ function Word(answer) {
         this.word.push(letterObject);
 
     }
-    this.toString = function() {
+    this.answerLog = function() {
         answerArr = "";
-        for(let j = 0; j < word.length; j++){
-            answer += this.word[i] + " ";
+        for(let j = 0; j < this.word.length; j++){
+            answer += this.word[j] + " ";
         }
-
+        console.log(answerArr + "\n");
+    }
     this.userInput = function(input) {
-        for(let k = 0; k < word.length; k++){
+        for(let k = 0; k < this.word.length; k++){
             this.word[i].letterCheck(input)
         }
     }
         
-    }
+    
 }
 module.exports = Word;
